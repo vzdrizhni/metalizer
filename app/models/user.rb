@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_one_attached :avatar, dependent: :destroy
-
+  has_many :articles, foreign_key: :author_id, dependent: :destroy
   validates :avatar, content_type: { in: %w[image/jpeg image/gif image/png],
                                      message: 'must be a valid image format' },
                      size: { less_than: 5.megabytes,
