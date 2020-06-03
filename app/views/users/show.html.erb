@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<div class="content">
+  <%= cl_image_tag(@user.avatar.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if @user.avatar.attached? %>
+</div>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

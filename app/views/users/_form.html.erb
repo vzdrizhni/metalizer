@@ -1,0 +1,16 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <span class="image">
+    <%= form.file_field :avatar %>
+  </span>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

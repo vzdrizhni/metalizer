@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dblobm2mp
+  api_key: '458731187969798'
+  api_secret: idXsad9IoBWyrevNHAmo4A5rG3o
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dblobm2mp
+  api_key: '458731187969798'
+  api_secret: idXsad9IoBWyrevNHAmo4A5rG3o
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dblobm2mp
+  api_key: '458731187969798'
+  api_secret: idXsad9IoBWyrevNHAmo4A5rG3o
+  enhance_image_tag: true
+  static_file_support: false
