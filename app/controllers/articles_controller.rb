@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = current_user.articles.build(article_params)
-
+    @article.image.attach(params[:article][:image])
     respond_to do |format|
       if @article.save && !current_user.nil?
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
