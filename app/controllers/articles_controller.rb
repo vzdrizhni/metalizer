@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @likes = @article.votes
+    @categories = @article.categories
     if current_user
       @current_vote = current_user.votes.find_by(article_id: @article.id)
     end
@@ -74,6 +75,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:author_id, :title, :text, :image)
+      params.require(:article).permit(:author_id, :title, :text, :image, category_ids: [])
     end
 end
