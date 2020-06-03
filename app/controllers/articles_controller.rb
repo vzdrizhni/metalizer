@@ -12,6 +12,9 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @likes = @article.votes
+    if current_user
+      @current_vote = current_user.votes.find_by(article_id: @article.id)
+    end
   end
 
   # GET /articles/new

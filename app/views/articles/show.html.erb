@@ -21,7 +21,11 @@
 
 <p>
   <% if current_user %>
-    <%= button_to 'Vote', article_votes_path(@article) %>
+    <% if @current_vote %>
+      <%= button_to 'Unvote', article_vote_path(@article, @current_vote), method: :delete %>
+    <% else %>
+      <%= button_to 'Vote', article_votes_path(@article) %>
+    <% end %>
   <% end %>
   <%= pluralize(@likes.size, 'vote') %>
 </p>

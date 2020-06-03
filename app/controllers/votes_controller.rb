@@ -7,4 +7,11 @@ class VotesController < ApplicationController
     redirect_to @article, notice: 'Thanks for your vote.'
   end
 
+  def destroy
+    vote = Vote.find(params[:id])
+    vote.destroy
+    @article = Article.find(params[:article_id])
+    redirect_to @article, notice: 'Sorry'
+  end
+
 end
