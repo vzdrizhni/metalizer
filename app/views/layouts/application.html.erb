@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <%= render 'layouts/signin_form' %>
+    <nav>
+      <%= render 'layouts/categories' %>
+      <%= render 'layouts/signin_form' %>
+    </nav>
     <%= yield %>
   </body>
 </html>

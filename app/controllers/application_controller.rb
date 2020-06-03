@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless current_user
   end
 
+  def admin_only!
+    unless current_user.admin?
+      redirect_to root_path, alert: "Unauthorized access"
+    end
+  end
+
   protect_from_forgery with: :exception
 
   def current_user

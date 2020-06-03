@@ -4,8 +4,9 @@ class Article < ApplicationRecord
   has_many :votes
   has_many :tags
   has_many :categories, through: :tags
-
   has_one_attached :image, dependent: :destroy
+
+  default_scope -> { order(created_at: :desc) }
 
   validates :image, content_type: { in: %w[image/jpeg image/gif image/png],
                                     message: 'must be a valid image format' },

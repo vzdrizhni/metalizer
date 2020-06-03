@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/categories', to: 'categories#new'
   post '/categories', to: 'categories#create'
+  get '/cats', to: 'categories#index'
 
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

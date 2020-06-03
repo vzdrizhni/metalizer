@@ -1,4 +1,9 @@
 class CategoriesController < ApplicationController
+  before_action :admin_only!, except: [:index]
+
+  def index
+    @categories = Category.all
+  end
 
   def new
     @category = Category.new
