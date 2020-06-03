@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
+  has_many :likers, through: :votes, source: :user
+  has_many :votes
 
   has_one_attached :image, dependent: :destroy
 
