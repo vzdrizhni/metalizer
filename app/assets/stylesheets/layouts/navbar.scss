@@ -1,0 +1,50 @@
+@import "colors";
+
+@font-face {
+  font-family: 'metal';
+  src: url('/assets/gunmetl.ttf')
+}
+
+@font-face {
+  font-family: 'Death-to-Metal';
+  src: url("/assets/Heavy Metal Rocking.ttf")
+}
+
+body {
+  margin: 0;
+}
+nav {
+  font-family: 'metal';
+  h1 {
+    font-family: 'Death-to-Metal';
+    font-size: 25px;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+  }
+  .cats {
+    display: flex;
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        padding: 0 10px;
+      }
+    }
+  }
+  .signin {
+    display: flex;
+    align-items: center;
+    h3 {
+      padding: 0 10px;
+    }
+  }
+}
