@@ -1,7 +1,8 @@
 <div>
+  <h3><%= link_to 'Home', articles_path %></h3>
   <% Category.all.each do |c| %>
     <ul>
-      <li><%= c.name %></li>
+      <li><%=link_to c.name, category_url(c)%></li>
     </ul>
   <% end %>
 </div>

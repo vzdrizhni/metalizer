@@ -1,6 +1,6 @@
 <header>
   <% if current_user %>
-    Hi <%= current_user.name %>
+    Hi <%= link_to current_user.name, user_path(current_user) %>
     |
     <%= link_to 'Log out', logout_path, method: :delete %>
   <% else %>

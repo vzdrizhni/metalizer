@@ -16,18 +16,20 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.author_id %></td>
+        <td><%= article.author.name %></td>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
-        <td><%= article.image %></td>
+        <td>
+          <div class="content">
+            <%= cl_image_tag(article.image.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if article.image.attached? %>
+          </div>
+        </td>
         <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if !current_user.nil? && (current_user.admin? || current_user == article.author) %>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>

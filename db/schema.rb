@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2020_06_03_182915) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.integer "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -89,4 +89,5 @@ ActiveRecord::Schema.define(version: 2020_06_03_182915) do
   add_foreign_key "tags", "articles"
   add_foreign_key "tags", "categories"
   add_foreign_key "votes", "articles"
+  add_foreign_key "votes", "users"
 end

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :admin_only!, except: [:index]
+  before_action :admin_only!, except: [:index, :show]
 
   def index
     @categories = Category.all
@@ -7,6 +7,11 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+  end
+
+  def show
+    @category = Category.find(params[:id])
+    @articles = @category.articles
   end
 
   def create

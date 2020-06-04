@@ -5,13 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.limit(5)
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    #@article.image.attach(params[:article][:image])
     @likes = @article.votes
     @categories = @article.categories
     if current_user
