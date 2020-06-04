@@ -5,7 +5,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.limit(5)
+    @articles = Article.limit(4)
+    @article = Article.all.sample
   end
 
   # GET /articles/1

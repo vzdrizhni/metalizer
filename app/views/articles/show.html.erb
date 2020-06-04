@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="article-show">
+<p class="title">
+  <%= @article.title %>
+</p>
+
+
+
+<div class="content">
+  <%= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
+</div>
+
+<p>
+  <%= @article.text %>
+</p>
 
 <p>
   <strong>Author:</strong>
   <%= @article.author.name %>
 </p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<div class="content">
-  <%= cl_image_tag(@article.image.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if @article.image.attached? %>
-</div>
 
 <p>
   <% if current_user %>
@@ -26,16 +26,18 @@
     <% else %>
       <%= button_to 'Vote', article_votes_path(@article) %>
     <% end %>
+    <p><%= pluralize(@likes.size, 'vote') %></p>
   <% end %>
-  <%= pluralize(@likes.size, 'vote') %>
 </p>
 
-<h2>Categories</h2>
+<h2 class="article-show-categories">Categories</h2>
 <ul>
   <% @categories.each do |category| %>
     <li><%= category.name %></li>
   <% end %>
 </ul>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class="edit">
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</div>
+</div>
