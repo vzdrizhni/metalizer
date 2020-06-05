@@ -1,3 +1,5 @@
+@import "colors";
+
 @font-face {
   font-family: 'metall';
   src: url('/assets/Heavy Metal Rocking.ttf');
@@ -15,6 +17,11 @@
 @font-face {
   font-family: 'text';
   src: url("/assets/FFMiloSlab-ExtraBoldItalic.otf")
+}
+
+@font-face {
+  font-family: 'texticles';
+  src: url("/assets/Myriad Pro Light Regular.ttf")
 }
 
 .cat-wrapper {
@@ -45,10 +52,10 @@
       }
     }
     .text {
-      height: 50px;
-      font-family: 'text';
+      font-family: 'texticles';
       font-size: 0.8em;
       padding-right: 13px;
+      color: #666;
     }
     .content-wrapper {
       width: 100%;

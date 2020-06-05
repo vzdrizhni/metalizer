@@ -1,0 +1,42 @@
+@import "colors";
+
+@font-face {
+  font-family: 'Death-to-Metal';
+  src: url("/assets/Heavy Metal Rocking.ttf")
+}
+
+@font-face {
+  font-family: 'texticles';
+  src: url("/assets/Myriad Pro Light Regular.ttf")
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'texticles';
+  background-color: $darkbrown;
+  color: $nav-bar-color;
+  .logo {
+    color: $nav-bar-color;
+    font-family: 'Death-to-Metal';
+    h1 {
+      font-size: 1em;
+      font-weight: 100;
+    }
+  }
+  .privacy {
+    display: flex;
+    justify-content: space-around;
+    a {
+      padding: 0 5px;
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+  .connect {
+    a {
+      color: $orange;
+    }
+  }
+}

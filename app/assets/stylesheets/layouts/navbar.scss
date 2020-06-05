@@ -15,9 +15,11 @@ body {
 }
 nav {
   font-family: 'metal';
+  color: $grey !important;
   h1 {
     font-family: 'Death-to-Metal';
     font-size: 25px;
+    color: $darkbrown;
   }
   display: flex;
   justify-content: space-around;
@@ -37,6 +39,11 @@ nav {
       li {
         list-style: none;
         padding: 0 10px;
+        h3 {
+          a {
+            color: #333;
+          }
+        }
       }
     }
   }
@@ -45,6 +52,9 @@ nav {
     align-items: center;
     h3 {
       padding: 0 10px;
+      a {
+        color: #333;
+      }
     }
   }
 }

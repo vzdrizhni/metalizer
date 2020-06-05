@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'activestorage'
 gem 'active_storage_validations'
 gem 'cloudinary'
+gem "font-awesome-rails"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
