@@ -5,11 +5,11 @@
 </p>
 
 
-
-<div class="content">
-  <%= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
+<div class="category-wraper">
+  <div class="content">
+    <%= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
+  </div>
 </div>
-
 <p>
   <%= @article.text %>
 </p>
@@ -36,8 +36,11 @@
     <li><%= category.name %></li>
   <% end %>
 </ul>
+<% if current_user.admin? || current_user == @article.author %>
 <div class="edit">
   <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>
+  <%= link_to 'Back', articles_path %> |
+  <%= link_to 'Delete', article_path(@article), method: :delete %>
 </div>
+<% end %>
 </div>

@@ -1,39 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<table>
-  <thead>
-  <tr>
-    <th>Author</th>
-    <th>Title</th>
-    <th>Text</th>
-    <th>Image</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.author.name %></td>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td>
-        <div class="content">
-          <%= cl_image_tag(article.image.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if article.image.attached? %>
+  <p id="notice"><%= notice %></p>
+  <div class="cat-wrapper">
+      <% @articles.each do |article| %>
+        <div class="article-wrapper">
+              <div class="content">
+                <%= cl_image_tag(article.image.key, gravity: "face") if article.image.attached? %>
+              </div>
+              <div class="content-wrapper">
+              <div class="tag">
+                <% article.categories.each do |cat| %>
+                    <%= link_to cat.name, category_url(cat) %>
+                <% end %>
+              </div>
+              <div class="title">
+                  <%= article.title %>
+                </div>
+              <div class="text">
+                  <%=article.text.truncate(200)%>
+                </div>
+              <p><%= link_to 'Read more..', article_path(article) %></p>
+            </div>
         </div>
-      </td>
-      <td><%= link_to 'Show', article %></td>
-      <% if current_user.admin? || current_user == article.author %>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+  </div>

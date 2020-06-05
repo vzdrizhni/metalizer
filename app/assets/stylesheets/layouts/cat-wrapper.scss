@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'metall';
+  src: url('/assets/Heavy Metal Rocking.ttf');
+}
+@font-face {
+  font-family: 'slayer';
+  src: url("/assets/SlayerPlain.TTF")
+}
+
+@font-face {
+  font-family: 'Death-to-Metal';
+  src: url("/assets/Heavy Metal Rocking.ttf")
+}
+
+@font-face {
+  font-family: 'text';
+  src: url("/assets/FFMiloSlab-ExtraBoldItalic.otf")
+}
+
+.cat-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .article-wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &:nth-child(3), &:nth-child(4) {
+      .content {
+        order: 1;
+      }
+    }
+    .title {
+      font-size: 1rem;
+      font-family: 'Death-to-Metal';
+    }
+    .content {
+      height: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 270px;
+        object-fit: fill;
+        height: 100%;
+      }
+    }
+    .text {
+      height: 50px;
+      font-family: 'text';
+      font-size: 0.8em;
+      padding-right: 13px;
+    }
+    .content-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #f6f6f6;
+      .tag {
+        display: flex;
+        a {
+          padding-right: 10px;
+          font-family: 'slayer';
+          font-size: 2rem;
+        }
+      }
+    }
+    a {
+      color: #f99c01;
+      font-family: 'slayer';
+      font-size: 2rem;
+    }
+  }
+}
