@@ -33,3 +33,24 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('input[type="checkbox"]').on('change', function(){
+        var noChecked = 0;
+        $.each($('input[type="checkbox"]'), function(){
+            if($(this).is(':checked')){
+                noChecked++;
+            }
+        });
+        if(noChecked >= 2){
+            $.each($('input[type="checkbox"]'), function(){
+                if($(this).not(':checked').length == 1){
+                    $(this).attr('disabled','disabled');
+                }
+            });
+        } else{
+            $('input[type="checkbox"]').removeAttr('disabled');
+        };
+    });
+</script>
