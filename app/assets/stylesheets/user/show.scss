@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'metall';
+  src: url('/assets/Heavy Metal Rocking.ttf');
+}
+@font-face {
+  font-family: 'slayer';
+  src: url("/assets/SlayerPlain.TTF")
+}
+
+.user {
+  padding-left: 20px;
+  background-color: $bg;
+  p {
+    font-family: 'slayer';
+    font-size: 3rem;
+    margin: 10px 0;
+    color: $darkbrown;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: $orange;
+      padding: 10px;
+      font-family: 'metall';
+    }
+  }
+}

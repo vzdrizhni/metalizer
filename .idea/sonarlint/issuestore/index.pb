@@ -87,12 +87,8 @@ V
 &app/views/articles/index.json.jbuilder,c\7\c7dd8083faa4c881a1ebfb621852c18c43c480d7
 R
 "app/views/categories/show.html.erb,7\8\78c2bd047e2d531898c563c6723f5003dbe00f95
-V
-&app/assets/stylesheets/categories.scss,6\c\6c14d15f11d65ccc2421513d40c10b5ddf22e7b0
 Z
 *app/views/layouts/_add_categories.html.erb,3\f\3f4affba2cdd0f7106614ab25ce7500288b866e5
-V
-&app/assets/stylesheets/application.css,5\6\565e1651e502b72ad76ed27e8f0a562fea115987
 S
 #app/assets/stylesheets/_colors.scss,7\5\75e8d2319eac0767caa770ad7d087116351c664c
 U

@@ -20,7 +20,7 @@
           <div class="content">
             <%= cl_image_tag(article.image.key, gravity: "face") if article.image.attached? %>
             <div class="tag">
-              <%= link_to article.categories.sample.name, category_url(article) %>
+                <%= link_to article.categories.sample.name, category_url(article.categories.first) %>
             </div>
             <div class="description">
               <%=link_to article.title, article_path(article) %>

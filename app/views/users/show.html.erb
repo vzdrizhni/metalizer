@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div class="user">
+  <p>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<div class="content">
-  <%= cl_image_tag(@user.avatar.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if @user.avatar.attached? %>
+  <div class="content">
+    <%= cl_image_tag(@user.avatar.key, width: 300, height: 200, effect: "cartoonify", gravity: "face") if @user.avatar.attached? %>
+  </div>
+  <div class="links">
+    <%= link_to 'Edit', edit_user_path(@user) %>
+    <%= link_to 'Back', users_path %>
+    <%= link_to 'Create new article', new_article_path%>
+    <%= render 'layouts/add_categories' %>
+  </div>
 </div>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-<%= link_to 'Create new article', new_article_path%>
-<%= render 'layouts/add_categories' %>
