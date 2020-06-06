@@ -1,65 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<div class="upper">
-<!--  <div class="carousel">-->
-    <%#= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
-<!--    <div class="tag">-->
-      <%#= link_to @article.categories.sample.name, category_url(@article) %>
-<!--    </div>-->
-<!--    <div class="description">-->
-      <%#=link_to @article.title, article_path(@article) %>
-<!--    </div>-->
-<!--  </div>-->
-  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade h-" data-ride="carousel">
-    <div class="carousel-inner h-100">
-      <div class="carousel-item active" data-interval="2000">
-        <%= cl_image_tag(@article.image.key, gravity: "face", class: 'd-block w-100 h-100') if @article.image.attached? %>
-        <div class="tag">
-          <%= link_to @article.categories.sample.name, category_url(@article.categories.first) %>
-        </div>
-        <div class="description">
-          <%=link_to @article.title, article_path(@article) %>
-        </div>
-      </div>
-      <% @articles.each do |article| %>
-        <div class="carousel-item" data-interval="2000">
-          <%= cl_image_tag(article.image.key, gravity: "face", class: 'd-block w-100 h-100') if article.image.attached? %>
+<% if @articles.any? %>
+  <div class="upper">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade h-" data-ride="carousel">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active" data-interval="2000">
+          <%= cl_image_tag(@article.image.key, gravity: "face", class: 'd-block w-100 h-100') if @article.image.attached? %>
           <div class="tag">
-            <%= link_to article.categories.sample.name, category_url(article.categories.first) %>
+            <%= link_to @article.categories.sample.name, category_url(@article.categories.first) %>
           </div>
           <div class="description">
-            <%=link_to article.title, article_path(article) %>
+            <%=link_to @article.title, article_path(@article) %>
           </div>
         </div>
-      <% end %>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-
-  <div class="weather">
-    <%#= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
-    <div id="wwo-weather-widget-1"></div><script type='text/javascript' src='https://www.worldweatheronline.com/widget/v5/weather-widget.ashx?loc=2160830&wid=1&tu=1&div=wwo-weather-widget-1' async></script><noscript><a href="https://www.worldweatheronline.com/orenburg-weather/orenburg/ru.aspx" alt="Hour by hour Orenburg, Orenburg weather">Orenburg, Orenburg weather forecast hourly</a></noscript>
-  </div>
-</div>
-
-<div class="lower">
-    <% @articles.each do |article| %>
-          <div class="content">
-            <%= cl_image_tag(article.image.key, gravity: "face") if article.image.attached? %>
+        <% @articles.each do |article| %>
+          <div class="carousel-item" data-interval="2000">
+            <%= cl_image_tag(article.image.key, gravity: "face", class: 'd-block w-100 h-100') if article.image.attached? %>
             <div class="tag">
-                <%= link_to article.categories.sample.name, category_url(article.categories.first) %>
+              <%= link_to article.categories.sample.name, category_url(article.categories.first) %>
             </div>
             <div class="description">
               <%=link_to article.title, article_path(article) %>
             </div>
           </div>
-    <% end %>
-</div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <div class="weather">
+      <%#= cl_image_tag(@article.image.key, gravity: "face") if @article.image.attached? %>
+      <div id="wwo-weather-widget-1"></div><script type='text/javascript' src='https://www.worldweatheronline.com/widget/v5/weather-widget.ashx?loc=2160830&wid=1&tu=1&div=wwo-weather-widget-1' async></script><noscript><a href="https://www.worldweatheronline.com/orenburg-weather/orenburg/ru.aspx" alt="Hour by hour Orenburg, Orenburg weather">Orenburg, Orenburg weather forecast hourly</a></noscript>
+    </div>
+  </div>
+
+  <div class="lower">
+      <% @articles.each do |article| %>
+            <div class="content">
+              <%= cl_image_tag(article.image.key, gravity: "face") if article.image.attached? %>
+              <div class="tag">
+                  <%= link_to article.categories.sample.name, category_url(article.categories.first) %>
+              </div>
+              <div class="description">
+                <%=link_to article.title, article_path(article) %>
+              </div>
+            </div>
+      <% end %>
+  </div>
+<% end %>

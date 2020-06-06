@@ -70,9 +70,6 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     builder (3.2.4)
-    bullet (6.1.0)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.11)
     byebug (11.1.3)
     capybara (3.32.2)
       addressable
@@ -242,6 +239,8 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     shellany (0.0.1)
+    shoulda-matchers (4.3.0)
+      activesupport (>= 4.2.0)
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -263,7 +262,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7-x64-mingw32)
-    uniform_notifier (1.13.0)
     web-console (4.0.2)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -292,7 +290,6 @@ DEPENDENCIES
   activestorage
   bootsnap (>= 1.4.2)
   bootstrap-sass
-  bullet
   byebug
   capybara (>= 2.15)
   cloudinary
@@ -307,6 +304,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (>= 6)
   selenium-webdriver
+  shoulda-matchers
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data

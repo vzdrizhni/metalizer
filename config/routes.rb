@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :votes
   end
-  root 'users#new'
+  root 'articles#index'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
