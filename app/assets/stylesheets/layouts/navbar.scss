@@ -10,12 +10,15 @@
   src: url("/assets/Heavy Metal Rocking.ttf")
 }
 
-body {
-  margin: 0;
+html, body{
+  min-height: 100vh;
+  overflow: auto;
 }
+
 nav {
   font-family: 'metal';
   color: $grey !important;
+  height: 75px;
   h1 {
     font-family: 'Death-to-Metal';
     font-size: 25px;

@@ -25,6 +25,7 @@ gem 'activestorage'
 gem 'active_storage_validations'
 gem 'cloudinary'
 gem "font-awesome-rails"
+gem 'bootstrap-sass'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -1,9 +1,9 @@
 class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :likers, through: :votes, source: :user
-  has_many :votes
+  has_many :votes, dependent: :destroy
   has_many :tags, dependent: :destroy
-  has_many :categories, through: :tags
+  has_many :categories, through: :tags, dependent: :destroy
   has_one_attached :image, dependent: :destroy
 
   default_scope -> { order(created_at: :desc) }
@@ -15,4 +15,5 @@ class Article < ApplicationRecord
                     presence: true
   validates :title, presence: true, length: { in: 3..50 }
   validates :text, presence: true, length: { in: 30..1500 }
+  validates :categories, presence: true
 end

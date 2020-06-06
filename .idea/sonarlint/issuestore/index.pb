@@ -103,3 +103,19 @@ Q
 !app/views/articles/index.html.erb,0\f\0f64eca4b31e9213d7cff375b4408e42f271176d
 `
 0app/assets/stylesheets/layouts/article_show.scss,7\3\7346ed946bb5337fe1740b8f480f00cc59130de7
+U
+%app/assets/stylesheets/user/show.scss,8\7\87690e04afb1cf64dc9c971498efb5016aa1c42d
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+9
+	yarn.lock,5\3\53585a096fe3a3b96321113856ae62602995a33b
+P
+ app/views/articles/edit.html.erb,4\4\4433d977b16ec79d44bb22392392d41590a64850
+U
+%app/assets/stylesheets/user/form.scss,8\8\887e49e0a56ef25df8d0f6ad5769e2b3a57b91c9
+S
+#app/javascript/packs/application.js,9\9\99cc6380f1c9eb8df5d3196ac74e2a76cf3fcf05
+M
+config/webpack/environment.js,1\3\1367e6230833c4b5189a4eb05ec7846363598d91
+W
+'app/assets/stylesheets/application.scss,1\6\1637dd5207d3586063c883b080a13b0322095524

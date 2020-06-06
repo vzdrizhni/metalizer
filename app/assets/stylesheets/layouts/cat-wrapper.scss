@@ -27,6 +27,7 @@
 .cat-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 50px;
   .article-wrapper {
     height: 100%;
     width: 100%;

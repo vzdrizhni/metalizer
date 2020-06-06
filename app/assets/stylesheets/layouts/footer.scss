@@ -11,12 +11,17 @@
 }
 
 footer {
+  height: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 25px;
   align-items: center;
   font-family: 'texticles';
   background-color: $darkbrown;
   color: $nav-bar-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   .logo {
     color: $nav-bar-color;
     font-family: 'Death-to-Metal';

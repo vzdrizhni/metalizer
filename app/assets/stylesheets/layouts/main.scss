@@ -7,21 +7,43 @@
   src: url("/assets/SlayerPlain.TTF")
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin-top: 0;
+  position: relative;
+}
+
+ul {
+  margin: 0 !important;
+}
+
 .upper {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  height: 350px;
+  height: 395px;
+  .carousel-item {
+    height: inherit !important;
+  }
   .carousel {
     width: 100%;
     height: inherit;
     position: relative;
     img {
       width: 100%;
-      height: 100%;
       display: block;
       margin-left: auto;
       margin-right: auto;
       object-fit: cover;
+      height: -webkit-fill-available;
+      height: -moz-fit-content;
+      max-height: 100%;
     }
     .tag a {
       position: absolute;
@@ -63,6 +85,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: 20%;
+  margin-bottom: 50px;
   .content {
     width: 100%;
     height: 100%;
