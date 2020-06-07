@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength:
 feature 'user features', type: :feature do
   feature 'create a new user' do
     before(:each) do
@@ -44,4 +43,5 @@ feature 'user features', type: :feature do
       expect(page).to have_content('Capos')
     end
   end
+  # rubocop:enable Metrics/BlockLength:
 end

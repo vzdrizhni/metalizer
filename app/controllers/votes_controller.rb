@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class VotesController < ApplicationController
   before_action :signed_in_only!
 

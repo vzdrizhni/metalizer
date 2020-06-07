@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class CategoriesController < ApplicationController
   before_action :admin_only!, except: %i[index show]
 
@@ -13,7 +11,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @articles = @category.articles.with_attached_image.includes([:tags, :categories])
+    @articles = @category.articles.with_attached_image.includes(%i[tags categories])
   end
 
   def create

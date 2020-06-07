@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -28,6 +26,7 @@ gem 'activestorage'
 gem 'bootstrap-sass'
 gem 'cloudinary'
 gem 'font-awesome-rails'
+gem 'rubocop'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -44,8 +43,8 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'bullet'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do

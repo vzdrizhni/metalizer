@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
   before_action :signed_in_only!, except: %i[index show]
@@ -8,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.limit(4)
-    @article = Article.with_attached_image.all.includes([:tags, :categories]).sample
+    @article = Article.with_attached_image.all.includes(%i[tags categories]).sample
   end
 
   # GET /articles/1

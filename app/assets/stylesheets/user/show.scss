@@ -2,28 +2,40 @@
   font-family: 'metall';
   src: url('/assets/Heavy Metal Rocking.ttf');
 }
+
 @font-face {
   font-family: 'slayer';
-  src: url("/assets/SlayerPlain.TTF")
+  src: url("/assets/SlayerPlain.TTF");
 }
 
 .user {
   padding-left: 20px;
   background-color: $bg;
+
+  .content {
+    img {
+      object-fit: fill !important;
+      height: 300px;
+      width: 250px;
+    }
+  }
+
   p {
-    font-family: 'slayer';
+    font-family: 'slayer', sans-serif;
     font-size: 3rem;
     margin: 10px 0;
     color: $darkbrown;
   }
+
   .links {
     display: flex;
     flex-direction: column;
+
     a {
       text-decoration: none;
       color: $orange;
       padding: 10px;
-      font-family: 'metall';
+      font-family: 'metall', sans-serif;
     }
   }
 }

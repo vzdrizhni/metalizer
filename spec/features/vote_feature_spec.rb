@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 feature 'vote features', type: :feature do
@@ -15,7 +13,8 @@ feature 'vote features', type: :feature do
       fill_in 'article[title]', with: 'Overkill'
       fill_in 'article[text]', with: 'Lorem ipsum dolor sit amet,
                                                              consectetur adipiscing elit, sed do eiusmod
-                                                             tempor incididunt ut labore et
+                                                             tempor incididunt ut
+                                                             labore et
                                                              dolore magna aliqua.'
       attach_file('article[image]', Rails.root + 'app/assets/images/8904a4a44249bdee8ebd968bd0e74bcb_400x400.jpeg')
       check('Thrash metal')

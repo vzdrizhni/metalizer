@@ -1,51 +1,82 @@
 @font-face {
-  font-family: 'slayer';
-  src: url("/assets/SlayerPlain.TTF")
+  font-family: 'slayer', sans-serif;
+  src: url("/assets/SlayerPlain.TTF");
 }
 
 @font-face {
-  font-family: 'text';
-  src: url("/assets/ACKNO.TTF")
+  font-family: 'text', sans-serif;
+  src: url("/assets/ACKNO.TTF");
 }
 
 .article-show {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   align-items: center;
   width: 50%;
   background-color: #e2e1e3;
   margin: 0 auto 50px;
+
+  .votes {
+    font-family: 'metal', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .author {
+    font-family: 'slayer', sans-serif;
+    font-size: 2.5em;
+  }
+
   .title {
-      font-family: 'slayer';
-      font-size: 2em;
-      margin: 10px 0;
-    }
+    font-family: 'slayer', Arial, Helvetica, serif;
+    font-size: 2em;
+    margin: 10px 0;
+  }
+
   p {
-    font-family: 'texticles';
+    font-family: 'texticles', sans-serif;
     text-align: left;
     padding: 0 15px;
   }
+
   input {
-    font-family: 'slayer';
+    font-family: 'slayer', sans-serif;
     font-size: 2.5em;
   }
+
   .article-show-categories {
-    font-family: 'slayer';
+    font-family: 'slayer', sans-serif;
     font-size: 2.5em;
     margin: 5px 0;
   }
-  li {
-    font-family: 'text';
+
+  ul {
+    padding-left: 0;
+
+    li {
+      font-family: 'metall', sans-serif;
+      list-style: none;
+    }
   }
+
   .edit {
-    font-family: 'text';
+    font-family: 'text', sans-serif;
     display: flex;
+
+    a {
+      font-family: 'slayer', sans-serif;
+      font-size: 3em;
+      color: #333;
+      padding: 10px 10px;
+    }
   }
+
   img {
-    width: 100%;
+    width: 600px;
+    height: 550px;
+    margin-bottom: 50px;
   }
 }
 
 h1 {
-  font-family: 'slayer';
+  font-family: 'slayer', sans-serif;
 }
