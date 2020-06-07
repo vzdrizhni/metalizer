@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class VotesController < ApplicationController
   before_action :signed_in_only!
 
@@ -13,5 +15,4 @@ class VotesController < ApplicationController
     @article = Article.find(params[:article_id])
     redirect_to @article, notice: 'Sorry'
   end
-
 end

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   subject(:user) { User.new(name: 'Capos') }
 
   describe 'validations' do
@@ -17,5 +18,4 @@ RSpec.describe User, type: :model do
     it { should have_many(:liked_articles).through(:votes) }
     it { should have_many(:votes) }
   end
-
 end

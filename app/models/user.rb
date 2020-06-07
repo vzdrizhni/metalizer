@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_one_attached :avatar, dependent: :destroy
   has_many :articles, foreign_key: :author_id, dependent: :destroy

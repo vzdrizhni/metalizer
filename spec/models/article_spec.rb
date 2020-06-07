@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:text) }
@@ -19,5 +20,4 @@ RSpec.describe Article, type: :model do
     it { should have_many(:tags) }
     it { should have_many(:categories).through(:tags) }
   end
-
 end

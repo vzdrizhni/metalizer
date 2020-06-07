@@ -1,13 +1,12 @@
-class ApplicationController < ActionController::Base
+# frozen_string_literal: true
 
+class ApplicationController < ActionController::Base
   def signed_in_only!
     redirect_to login_path unless current_user
   end
 
   def admin_only!
-    unless current_user.admin?
-      redirect_to root_path, alert: "Unauthorized access"
-    end
+    redirect_to root_path, alert: 'Unauthorized access' unless current_user.admin?
   end
 
   protect_from_forgery with: :exception
