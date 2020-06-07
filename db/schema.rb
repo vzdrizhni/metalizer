@@ -49,15 +49,6 @@ ActiveRecord::Schema.define(version: 2020_06_03_182915) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "caticles", force: :cascade do |t|
-    t.integer "article_id", null: false
-    t.integer "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id"], name: "index_caticles_on_article_id"
-    t.index ["category_id"], name: "index_caticles_on_category_id"
-  end
-
   create_table "tags", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "category_id", null: false

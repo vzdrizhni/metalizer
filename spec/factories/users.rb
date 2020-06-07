@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :user do
-    name { "MyString" }
+    name { "Capos" }
+    admin { true }
   end
 end

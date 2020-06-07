@@ -38,7 +38,7 @@ feature "user features", type: :feature do
       expect(page).to have_content("Bad name. Try again.")
     end
 
-    scenario "with invalid params" do
+    scenario "with valid params" do
       fill_in "session[name]", with: "Capos"
       click_button "Log in"
       expect(page).to have_content("Capos")

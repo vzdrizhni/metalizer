@@ -13,7 +13,7 @@ class Article < ApplicationRecord
                     size: { less_than: 5.megabytes,
                             message: 'should be less than 5MB' },
                     presence: true
-  validates :title, presence: true, length: { in: 3..50 }
+  validates :title, presence: true, length: { in: 3..50 }, uniqueness: true
   validates :text, presence: true, length: { in: 30..1500 }
   validates :categories, presence: true
 end
