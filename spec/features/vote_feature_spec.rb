@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'vote features', type: :feature do
   Category.create(name: 'Thrash metal')
-
   feature 'create a new vote' do
     before(:each) do
       visit 'users/new'
