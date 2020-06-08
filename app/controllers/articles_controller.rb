@@ -6,14 +6,13 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.limit(4)
-    @article = Article.with_attached_image.all.includes(%i[tags categories]).sample
+    @article = Article.abba.sample
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
-    # @article.image.attach(params[:article][:image])
     @likes = @article.votes
     @categories = @article.categories
     @current_vote = current_user.votes.find_by(article_id: @article.id) if current_user

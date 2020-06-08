@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @articles = @category.articles.with_attached_image.includes(%i[tags categories])
+    @articles = @category.articles.abba
   end
 
   def create

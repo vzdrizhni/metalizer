@@ -16,4 +16,8 @@ class Article < ApplicationRecord
   validates :title, presence: true, length: { in: 3..50 }, uniqueness: true
   validates :text, presence: true, length: { in: 30..1500 }
   validates :categories, presence: true
+
+  def self.abba
+    with_attached_image.all.includes(%i[tags categories])
+  end
 end

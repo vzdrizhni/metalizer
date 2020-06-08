@@ -1,5 +1,3 @@
 <div>
-  <% if  !current_user.nil? && current_user.admin? %>
-    <%= link_to 'Add category', new_category_path %>
-  <% end %>
+  <%= admin?(current_user) %>
 </div>
