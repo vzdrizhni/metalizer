@@ -36,11 +36,12 @@
   .article-show-categories {
     font-family: 'slayer', sans-serif;
     font-size: 2.5em;
-    margin: 5px 0;
+    margin: 10px 0 !important;
   }
 
   ul {
     padding-left: 0;
+    margin-bottom: 10px !important;
 
     li {
       font-family: 'metall', sans-serif;
