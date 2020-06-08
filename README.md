@@ -26,7 +26,7 @@
     <img src="app/assets/images/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">RoR / Capstone --> [LifeOpedia!]</h3>
+  <h3 align="center">RoR / Capstone --> [metalizer]</h3>
 
   <p align="center">
     This project is the Capstone of the Microverse curriculum at the end of the Ruby on Rails module!
@@ -60,7 +60,7 @@ It is a webapp where users can register using name, username, password and can s
 As a logged in user, it is possible to create articles, edit profile, comment, vote and bookmark an article for future reads.
 The app can be used also on read only mode, with restricted access to its features.
 
-![screenshot-1](app/assets/images/screenshot-1.png)
+![screenshot-1](app/assets/images/screenshot-1.PNG)
 
 <!-- INSTALLATION -->
 ## Installation
@@ -87,7 +87,7 @@ To have this app on your pc, you need to:
 
 * Run the command and see the output:
 ```$ bundle exec rspec```
-![Rspec](app/assets/images/rspec.png)
+![Rspec](app/assets/images/rspec.PNG)
 
 ## Database Structure
  * Database schema used for this project reflects the following structure:
