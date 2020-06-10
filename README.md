@@ -109,6 +109,10 @@ This project was built using these technologies.
 * Live Demo Link: - Heroku Deployment - [metalizer](https://fathomless-atoll-13027.herokuapp.com/articles) :point_left:
 ## WalkThrough Video:
 https://www.loom.com/share/a4b5d729b10a4f88ac7e8365e81e2444
+## Potential future features
+- Add fully working weather API
+- Extend the Authorisation feature
+- Improve the front-end
 
 <!-- CONTACT -->
 ## Contributors
