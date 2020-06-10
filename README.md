@@ -105,10 +105,10 @@ This project was built using these technologies.
 * Atom
 
 <!-- Live Demo -->
-## Live Demo and Presentation
-* Live Demo Link: [metalizer](https://fathomless-atoll-13027.herokuapp.com/articles) :point_left:
-##
-* Project Presentation: [Loom](https://www.loom.com/share/a4b5d729b10a4f88ac7e8365e81e2444) :point_left:
+## Live Demo and Walkthrough Video
+* Live Demo Link: - Heroku Deployment - [metalizer](https://fathomless-atoll-13027.herokuapp.com/articles) :point_left:
+## WalkThrough Video:
+https://www.loom.com/share/a4b5d729b10a4f88ac7e8365e81e2444
 
 <!-- CONTACT -->
 ## Contributors
