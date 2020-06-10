@@ -1,0 +1,26 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <span class="image">
+    <%= form.file_field :avatar %>
+  </span>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+    $("#user_avatar").bind("change", function() {
+        const size_in_megabytes = this.files[0].size/1024/1024;
+        if (size_in_megabytes > 5) {
+            alert("Maximum file size is 5MB. Please choose a smaller file.");
+            $("#user_avatar").val("");
+        }
+    });
+</script>

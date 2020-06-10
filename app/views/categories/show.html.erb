@@ -1,0 +1,24 @@
+  <p id="notice"><%= notice %></p>
+  <div class="cat-wrapper">
+      <% @articles.each do |article| %>
+        <div class="article-wrapper">
+              <div class="content">
+                <%= cl_image_tag(article.image.key, gravity: "face") if article.image.attached? %>
+              </div>
+              <div class="content-wrapper">
+              <div class="tag">
+                <% article.categories.each do |cat| %>
+                    <%= link_to cat.name, category_url(cat) %>
+                <% end %>
+              </div>
+              <div class="title">
+                  <%= article.title %>
+                </div>
+              <div class="text">
+                  <%=article.text.truncate(200)%>
+                </div>
+              <p><%= link_to 'Read more..', article_path(article) %></p>
+            </div>
+        </div>
+      <% end %>
+  </div>

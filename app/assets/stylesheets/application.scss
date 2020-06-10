@@ -1,0 +1,39 @@
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+@import "layouts/main";
+@import "layouts/navbar";
+@import "layouts/cat-wrapper";
+@import "layouts/article_show";
+@import "layouts/footer";
+@import "user/show";
+@import "user/form";
+
+@font-face {
+  font-family: 'metall';
+  src: font-url("HeavyMetalRocking.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'slayer';
+  src: font-url("SlayerPlain.TTF") format('truetype');
+}
+
+@font-face {
+  font-family: 'text', sans-serif;
+  src: font-url("ACKNO.TTF") format('truetype');
+}
+
+@font-face {
+  font-family: 'Death-to-Metal';
+  src: font-url("HeavyMetalRocking.ttf");
+}
+
+@font-face {
+  font-family: 'texticles';
+  src: font-url("MyriadProLightRegular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'metal';
+  src: font-url('gunmetl.ttf');
+}

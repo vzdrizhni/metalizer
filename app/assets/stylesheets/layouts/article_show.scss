@@ -1,0 +1,73 @@
+.article-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: #e2e1e3;
+  margin: 0 auto 50px;
+
+  .votes {
+    font-family: 'metal', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .author {
+    font-family: 'slayer', sans-serif;
+    font-size: 2.5em;
+  }
+
+  .title {
+    font-family: 'slayer', Arial, Helvetica, serif;
+    font-size: 2em;
+    margin: 10px 0;
+  }
+
+  p {
+    font-family: 'texticles', sans-serif;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  input {
+    font-family: 'slayer', sans-serif;
+    font-size: 2.5em;
+  }
+
+  .article-show-categories {
+    font-family: 'slayer', sans-serif;
+    font-size: 2.5em;
+    margin: 10px 0 !important;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-bottom: 10px !important;
+
+    li {
+      font-family: 'metall', sans-serif;
+      list-style: none;
+    }
+  }
+
+  .edit {
+    font-family: 'text', sans-serif;
+    display: flex;
+
+    a {
+      font-family: 'slayer', sans-serif;
+      font-size: 3em;
+      color: #333;
+      padding: 10px 10px;
+    }
+  }
+
+  img {
+    width: 600px;
+    height: 550px;
+    margin-bottom: 50px;
+  }
+}
+
+h1 {
+  font-family: 'slayer', sans-serif;
+}

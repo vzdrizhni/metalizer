@@ -1,0 +1,42 @@
+@import "colors";
+
+footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+  font-family: 'texticles', sans-serif;
+  background-color: $darkbrown;
+  color: $nav-bar-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .logo {
+    color: $nav-bar-color;
+    font-family: 'Death-to-Metal', sans-serif;
+
+    h1 {
+      font-size: 1em;
+      font-weight: 100;
+    }
+  }
+
+  .privacy {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      padding: 0 5px;
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+
+  .connect {
+    a {
+      color: $orange;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="signin">
+  <% if current_user %>
+     <h3>Hi  <%= link_to current_user.name, user_path(current_user) %></h3>
+    |
+    <h3><%= link_to 'Log out', logout_path, method: :delete %></h3>
+  <% else %>
+    <h3><%= link_to 'Log in', login_path %></h3>
+    |
+    <h3><%= link_to 'Sign up', new_user_path %></h3>
+  <% end %>
+</div>

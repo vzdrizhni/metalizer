@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin-top: 0;
+  position: relative;
+}
+
+ul {
+  margin: 0 !important;
+}
+
+.lower {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 20%;
+  margin-bottom: 50px;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 270px;
+      max-width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: fill;
+    }
+  }
+
+  .tag a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #f7f7f7;
+    font-family: 'metall', sans-serif;
+    font-weight: 100;
+    background-color: rgba(125, 127, 130, 0.8);
+  }
+
+  .description {
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      color: #f7f7f7;
+      font-family: 'slayer', sans-serif;
+      font-size: 2em;
+      font-weight: 100;
+      background-color: rgba(125, 127, 130, 0.8);
+    }
+  }
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 395px;
+
+  .carousel-item {
+    height: inherit !important;
+  }
+
+  .carousel {
+    width: 100%;
+    height: inherit;
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: cover;
+      height: -webkit-fill-available;
+      height: -moz-fit-content;
+      max-height: 100%;
+    }
+
+    .tag a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      color: #f7f7f7;
+      font-family: 'metall', sans-serif;
+      font-weight: 100;
+      background-color: rgba(125, 127, 130, 0.8);
+    }
+
+    .description {
+      a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        color: #f7f7f7;
+        font-family: 'slayer', sans-serif;
+        font-size: 2em;
+        font-weight: 100;
+        background-color: rgba(125, 127, 130, 0.8);
+      }
+    }
+  }
+
+  .weather {
+    width: 100%;
+    height: inherit;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#notice {
+  margin: 0;
+  text-align: center;
+  background-color: $orange;
+}

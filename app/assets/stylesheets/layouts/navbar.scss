@@ -1,0 +1,65 @@
+@import "colors";
+
+html,
+body {
+  min-height: 100vh;
+  overflow: auto;
+}
+
+nav {
+  font-family: 'metal', sans-serif;
+  color: $grey !important;
+  height: 75px;
+
+  h1 {
+    font-family: 'Death-to-Metal', sans-serif;
+    font-size: 25px;
+    color: $darkbrown !important;
+  }
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    font-size: 25px;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  .signin {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      padding: 0 10px;
+
+      a {
+        color: #333;
+      }
+    }
+  }
+
+  .cats {
+    display: flex;
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        padding: 0 10px;
+
+        h3 {
+          a {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}

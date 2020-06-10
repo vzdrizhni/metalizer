@@ -1,0 +1,69 @@
+@import "colors";
+
+.content {
+  height: 100%;
+  width: 100%;
+
+  img {
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+  }
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f6f6f6;
+
+  .tag {
+    display: flex;
+
+    a {
+      padding-right: 10px;
+      font-family: 'slayer', sans-serif;
+      font-size: 2rem;
+    }
+  }
+}
+
+.cat-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 50px;
+
+  .article-wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      .content {
+        order: 1;
+      }
+    }
+
+    .title {
+      font-size: 1rem;
+      font-family: 'Death-to-Metal', sans-serif;
+    }
+
+    .text {
+      font-family: 'texticles', sans-serif;
+      font-size: 0.8em;
+      padding-right: 13px;
+      color: #666;
+    }
+
+    a {
+      color: #f99c01;
+      font-family: 'slayer', sans-serif;
+      font-size: 2rem;
+    }
+  }
+}
