@@ -67,11 +67,8 @@ The app can be used also on read only mode, with restricted access to its featur
 
 To have this app on your pc, you need to:
 * have Ruby & Ruby on Rails installed in your computer
-* [download](https://github.com/vzdrizhni/metalizer/archive/development.zip) or clone this repo:
-  - Clone with SSH:
-  ```
-    git@github.com:vzdrizhni/metalizer.git
-  ```
+* [download](https://github.com/vzdrizhni/metalizer/archive/development.zip) or clone this repo: 
+ 
   - Clone with HTTPS
   ```
     https://github.com/vzdrizhni/metalizer.git
