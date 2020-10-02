@@ -126,7 +126,6 @@ https://www.loom.com/share/a4b5d729b10a4f88ac7e8365e81e2444
 * [Microverse](https://www.microverse.org/)
 * [Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
 * [Ruby on Rails](https://rubyonrails.org/)
-* [Bootstrap](https://getbootstrap.com/)
 * [Behance](https://www.behance.net/)
 * [Heroku](https://www.heroku.com/)
 
